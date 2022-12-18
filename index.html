@@ -1,0 +1,388 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <link rel="stylesheet" href="style.css">
+</head>
+
+<body>
+    <div class="heading-wrap">
+        <h1 class="heading">mySQL</h1>
+    </div>
+
+    <!-- basic -->
+    <div class="heading-documentary">database basic</div>
+    <div class="documentary-area">
+        <!-- creation -->
+        <div class="sqlHead">create database :</div>
+        <div class="sqlCommand"><span>command : </span> CREATE DATABASE database_name</div>
+
+        <br>
+
+        <!-- showing -->
+        <div class="sqlHead">show all database :</div>
+        <div class="sqlCommand"><span>command : </span> SHOW DATABASES</div>
+
+        <br>
+
+        <!-- delation -->
+        <div class="sqlHead">delete database :</div>
+        <div class="sqlCommand"><span>command : </span> DROP DATABASE database_name</div>
+    </div>
+
+    <!-- table cration -->
+    <div class="heading-documentary">table creation</div>
+    <div class="documentary-area">
+        <div class="uppercase-text">create table <span>table_name</span></div>
+        <div class="coading-text-area">
+            (
+            <br>
+            <div class="somePadding"></div> Roll int(5),
+            <br>
+            <div class="somePadding"></div> Name varChar(21),
+            <br>
+            <div class="somePadding"></div> Gender varChar(5),
+            <br>
+            <div class="somePadding"></div> Age int(3),
+            <br>
+            <div class="somePadding"></div> GPA double(3,2),
+            <br>
+            <div class="somePadding"></div> City varChar(21),
+            <br>
+            <div class="somePadding"></div> PRIMARY KEY(Roll)
+            <br>
+            );
+        </div>
+    </div>
+
+    <!-- insert value in table -->
+    <div class="heading-documentary">value inserting in table</div>
+    <div class="documentary-area">
+        <div class="uppercase-text">INSERT INTO <span>table_name</span></div>
+        <div class="uppercase-text">VALUES</div>
+        <div class="coading-text-area">
+            (101, 'Joy Biswas', 'Male', 23, 3.11, 'Khulna'),
+            <br>
+            (102, 'Lena Anderson', 'Female', 21, 3.00, 'Others'),
+            <br>
+            (103, 'John Doe', 'Male', 21, 3.11, 'Others');
+        </div>
+    </div>
+
+    <!-- basic -->
+    <div class="heading-documentary">table basic</div>
+    <div class="documentary-area">
+        <!-- creation -->
+        <div class="sqlHead">rename table :</div>
+        <div class="sqlCommand"><span>command : </span> RENAME TABLE past_name TO present_name;</div>
+
+        <br>
+
+        <!-- delation -->
+        <div class="sqlHead">delete table :</div>
+        <div class="sqlCommand"><span>command : </span> DROP TABLE table_name;</div>
+    </div>
+
+    <!-- table selection -->
+    <div class="heading-documentary">table selection</div>
+    <div class="documentary-area">
+
+        <!-- one column -->
+        <div class="sqlHead">by one column :</div>
+        <div class="sqlCommand"><span>command : </span> SELECT Name</div>
+        <div class="sqlCommand"><span>command : </span> FROM table_name;</div>
+        <div class="sqlComment">
+            শুধু ’Name’ কলাম এর উপাত্ত গুলো দেখাবে।
+        </div>
+
+        <br>
+
+        <!-- multile column -->
+        <div class="sqlHead">by multiple column :</div>
+        <div class="sqlCommand"><span>command : </span> SELECT Name, Age, Gender</div>
+        <div class="sqlCommand"><span>command : </span> FROM table_name;</div>
+        <div class="sqlComment">
+            ’Name, Age, Gender’ কলাম এর উপাত্ত গুলো দেখাবে।
+        </div>
+
+        <br>
+
+        <!-- all column -->
+        <div class="sqlHead">by all column :</div>
+        <div class="sqlCommand"><span>command : </span> SELECT *</div>
+        <div class="sqlCommand"><span>command : </span> FROM table_name;</div>
+        <div class="sqlComment">
+            সব গুলো কলাম এর উপাত্ত গুলো দেখাবে।
+        </div>
+
+        <br>
+
+        <!-- by limit -->
+        <div class="sqlHead">by all column with limitation :</div>
+        <div class="sqlCommand"><span>command : </span> SELECT *</div>
+        <div class="sqlCommand"><span>command : </span> FROM table_name</div>
+        <div class="sqlCommand"><span>command : </span> LIMIT 5;</div>
+        <div class="sqlComment">
+            প্রথম ৫টি দেখাবে।
+        </div>
+
+        <br>
+
+        <!-- by limit 1 -->
+        <div class="sqlHead">by all column with limitation 1 :</div>
+        <div class="sqlCommand"><span>command : </span> SELECT *</div>
+        <div class="sqlCommand"><span>command : </span> FROM table_name</div>
+        <div class="sqlCommand"><span>command : </span> LIMIT 3,5;</div>
+        <div class="sqlComment">
+            প্রথম তিনটি বাদ দিয়ে, পরের ৫টি দেখাবে।
+        </div>
+
+        <br>
+
+        <!-- by distinct -->
+        <div class="sqlHead">by all column with limitation 1 :</div>
+        <div class="sqlCommand"><span>command : </span> SELECT DISTINCT City</div>
+        <div class="sqlCommand"><span>command : </span> FROM table_name</div>
+        <div class="sqlComment">
+            City কলামে একই উপাত্ত অনেক গুলো থাকলে একটিই দেখাবে।
+        </div>
+    </div>
+
+    <div class="heading-documentary">table data shorting</div>
+    <div class="documentary-area">
+
+        <!-- shorting by name -->
+        <div class="sqlHead">order by name :</div>
+        <div class="sqlCommand"><span>command : </span> SELECT Name, Age, City</div>
+        <div class="sqlCommand"><span>command : </span> FROM table_name</div>
+        <div class="sqlCommand"><span>command : </span> ORDER BY Name;</div>
+        <div class="sqlComment">
+            Name কলামের মধ্যের সকল উপাত্ত ইংলিশ শব্দ অনুযায়ী ছোট থেকে বড় shorting হবে, অর্থাৎ a, b, c, d, e ..... এভাবে, আবার নাম্বার এর ক্ষেত্রে ১,২,৩,৪,৫.... এভাবে দেখাবে, যে কোন কলামের ক্ষেত্রে এটি প্রযোয্য হবে।
+        </div>
+
+        <br>
+
+        <!-- shorting by name 1 -->
+        <div class="sqlHead">order by name example :</div>
+        <div class="sqlCommand"><span>command : </span> SELECT Id, Name, Age, City</div>
+        <div class="sqlCommand"><span>command : </span> FROM table_name</div>
+        <div class="sqlCommand"><span>command : </span> ORDER BY Id;</div>
+        <div class="sqlComment">
+            Id কলামের মধ্যের সকল উপাত্ত ছোট থেকে বড় shorting হবে, অর্থাৎ ১,২,৩,৪,৫ ..... এভাবে।
+        </div>
+
+        <br>
+
+        <!-- shorting by name 1 -->
+        <div class="sqlHead">order by name 1 :</div>
+        <div class="sqlCommand"><span>command : </span> SELECT Id, Name, Age, City</div>
+        <div class="sqlCommand"><span>command : </span> FROM table_name</div>
+        <div class="sqlCommand"><span>command : </span> ORDER BY Id DESC;</div>
+        <div class="sqlComment">
+            Id কলামের মধ্যের সকল উপাত্ত বড় থেকে ছোট shorting হবে, অর্থাৎ ৯,৮,৭,৬,৫,৪,৩ ..... এভাবে।
+        </div>
+
+    </div>
+
+    <div class="heading-documentary">where clause</div>
+    <div class="documentary-area">
+
+        <!-- where clause 1 -->
+        <div class="sqlHead">where clause :</div>
+        <div class="sqlCommand"><span>command : </span> SELECT City</div>
+        <div class="sqlCommand"><span>command : </span> FROM table_name</div>
+        <div class="sqlCommand"><span>command : </span> WHERE Gender='Female';</div>
+        <div class="sqlComment">
+            শুধু মাত্র Female দের City দেখতে।
+        </div>
+
+        <br>
+
+        <!-- where clause 1 -->
+        <div class="sqlHead">where clause :</div>
+        <div class="sqlCommand"><span>command : </span> SELECT *</div>
+        <div class="sqlCommand"><span>command : </span> FROM table_name</div>
+        <div class="sqlCommand"><span>command : </span> WHERE Age=18;</div>
+        <div class="sqlComment">
+            শুধু মাত্র যাদের Age ১৮ তাদের উপাত্ত দেখতে।
+        </div>
+
+        <br>
+
+        <div class="sqlCommand"><span>command : </span> WHERE Age>18;</div>
+        <div class="sqlComment">
+            শুধু মাত্র যাদের Age ১৮ থেকে বেশি, তাদের উপাত্ত দেখতে।
+        </div>
+
+        <br>
+
+        <div class="sqlCommand"><span>command : </span> WHERE Age>=18;</div>
+        <div class="sqlComment">
+            যাদের Age ১৮ থেকে বেশি, বা সমান, তাদের উপাত্ত দেখতে।
+        </div>
+
+        <br>
+
+        <div class="sqlCommand"><span>command : </span> WHERE Age<18;</div>
+        <div class="sqlComment">
+            শুধু মাত্র যাদের Age ১৮ থেকে কম, তাদের উপাত্ত দেখতে।
+        </div>
+
+        <br>
+
+        <div class="sqlCommand"><span>command : </span> WHERE Age<=18;</div>
+        <div class="sqlComment">
+            যাদের Age ১৮ থেকে কম, বা সমান, তাদের উপাত্ত দেখতে।
+        </div>
+
+        <br>
+
+        <!-- where clause 1 -->
+        <div class="sqlHead">where clause :</div>
+        <div class="sqlCommand"><span>command : </span> SELECT *</div>
+        <div class="sqlCommand"><span>command : </span> FROM table_name</div>
+        <div class="sqlCommand"><span>command : </span> WHERE Id=109;</div>
+        <div class="sqlComment">
+            যার Id ১০৯ শুধু তার উপাত্ত দেখতে।
+        </div>
+
+        <br>
+
+        <div class="sqlCommand"><span>command : </span> WHERE Id!=109;</div>
+        <div class="sqlComment">
+            Id ১০৯ বাদে সকলের উপাত্ত দেখতে।
+        </div>
+
+    </div>
+
+    <div class="heading-documentary">between</div>
+    <div class="documentary-area">
+
+        <!-- where clause 1 -->
+        <div class="sqlHead">between :</div>
+        <div class="sqlCommand"><span>command : </span> SELECT *</div>
+        <div class="sqlCommand"><span>command : </span> FROM table_name</div>
+        <div class="sqlCommand"><span>command : </span> WHERE Id BETWEEN 102 AND 105;</div>
+        <div class="sqlComment">
+            যাদের Id ১০২ থেকে ১০৫, শুধু তাদের উপাত্ত দেখতে।
+        </div>
+
+    </div>
+
+    <div class="heading-documentary">or</div>
+    <div class="documentary-area">
+
+        <!-- where clause 1 -->
+        <div class="sqlHead">or :</div>
+        <div class="sqlCommand"><span>command : </span> SELECT *</div>
+        <div class="sqlCommand"><span>command : </span> FROM table_name</div>
+        <div class="sqlCommand"><span>command : </span> WHERE Gender='Male' OR GPA>=3.50;</div>
+        <div class="sqlComment">
+            যে কোন একটি শর্ত সত্য হলে OR কাজ করে।
+            GPA মিলে গেলে Male ও আসতে পারে Female ও আসতে পারে।
+        </div>
+
+    </div>
+
+    <div class="heading-documentary">And</div>
+    <div class="documentary-area">
+
+        <!-- where clause 1 -->
+        <div class="sqlHead">And :</div>
+        <div class="sqlCommand"><span>command : </span> SELECT *</div>
+        <div class="sqlCommand"><span>command : </span> FROM table_name</div>
+        <div class="sqlCommand"><span>command : </span> WHERE Gender='Male' AND GPA>=3.50;</div>
+        <div class="sqlComment">
+            দুটি শর্তই সত্য হতে হবে। Gender Male হলে, GPA 3.50 এর সমান অথবা বড় হতে হবে, নাহলে দেখাবে না।
+        </div>
+
+    </div>
+
+    <div class="heading-documentary">And, or</div>
+    <div class="documentary-area">
+
+        <!-- where clause 1 -->
+        <div class="sqlHead">And, or :</div>
+        <div class="sqlCommand"><span>command : </span> SELECT *</div>
+        <div class="sqlCommand"><span>command : </span> FROM table_name</div>
+        <div class="sqlCommand"><span>command : </span> WHERE City='Khulna' AND (Gender='Female' OR GPA>=3.50);</div>
+        <div class="sqlComment">
+            City Khulna ই হতে হবে। আবার Gender Female অথবা Male হলেও, GPA 3.50 থেকে বেশি কিংবা সমান হলেও দেখাবে।
+        </div>
+
+    </div>
+
+    <div class="heading-documentary">in</div>
+    <div class="documentary-area">
+
+        <!-- where clause 1 -->
+        <div class="sqlHead">in :</div>
+        <div class="sqlCommand"><span>command : </span> SELECT *</div>
+        <div class="sqlCommand"><span>command : </span> FROM table_name</div>
+        <div class="sqlCommand"><span>command : </span> WHERE City IN ('Sylhet', 'Khulna', 'Dhaka');</div>
+        <div class="sqlComment">
+            যাদের City হসেবে Sylhet, Khulna, Dhaka দেওয়া তাদের উপাত্ত গুলো দেখতে।
+        </div>
+
+    </div>
+
+    <div class="heading-documentary">not in</div>
+    <div class="documentary-area">
+
+        <!-- where clause 1 -->
+        <div class="sqlHead">not in :</div>
+        <div class="sqlCommand"><span>command : </span> SELECT *</div>
+        <div class="sqlCommand"><span>command : </span> FROM table_name</div>
+        <div class="sqlCommand"><span>command : </span> WHERE City NOT IN ('Sylhet', 'Khulna', 'Dhaka');</div>
+        <div class="sqlComment">
+            যাদের City হসেবে Sylhet, Khulna, Dhaka দেওয়া তাদের বাদ দিয়ে, বাকি সবার উপাত্ত গুলো দেখতে।
+        </div>
+
+    </div>
+
+    <div class="heading-documentary">like</div>
+    <div class="documentary-area">
+
+        <!-- where clause 1 -->
+        <div class="sqlHead">like :</div>
+        <div class="sqlCommand"><span>command : </span> SELECT *</div>
+        <div class="sqlCommand"><span>command : </span> FROM table_name</div>
+        <div class="sqlCommand"><span>command : </span> WHERE Name LIKE 'J%';</div>
+        <div class="sqlComment">
+            যাদের নামের প্রথম অক্ষর J, দিয়ে শুধু তাদের উপাত্ত গুলো দেখতে।
+        </div>
+
+        <br>
+
+        <div class="sqlCommand"><span>command : </span> WHERE Name LIKE '%j';</div>
+        <div class="sqlComment">
+            যাদের নামের শেষ অক্ষর J, শুধু তাদের উপাত্ত গুলো দেখতে।
+        </div>
+
+        <br>
+
+        <div class="sqlCommand"><span>command : </span> WHERE Name LIKE '_j';</div>
+        <div class="sqlCommand"><span>command : </span> WHERE Name LIKE '_j%';</div>
+        <div class="sqlComment">
+            যাদের নামের দ্বীতিয় অক্ষর J, শুধু তাদের উপাত্ত গুলো দেখতে।
+        </div>
+
+        <br>
+
+        <div class="sqlCommand"><span>command : </span> WHERE Name LIKE '%j_';</div>
+        <div class="sqlComment">
+            যাদের নামের শেষের আগের অক্ষর J, শুধু তাদের উপাত্ত গুলো দেখতে।
+        </div>
+
+    </div>
+
+    <footer style="width: 100%; height: 195px; background: var(--primary-bg); margin-top: 51px;"></footer>
+
+    <script src="app.js"></script>
+</body>
+
+</html>
