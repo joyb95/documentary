@@ -13,9 +13,14 @@
 :root {
     --white: rgb(255, 255, 255);
     --black: rgb(0, 0, 0);
-    --body-bg: rgb(235, 235, 235);
+    --body-bg: rgb(241, 241, 241);
     --primary-bg: rgb(255, 255, 255);
     --border-color: rgb(255, 0, 119);
+    --command-color: rgb(207, 207, 207);
+    
+    /* for scroll */
+    --scrollBg: rgb(143, 143, 143);
+    --scrollBgHover: rgb(113, 113, 113);
 }
 
 :root body.dark {
@@ -24,7 +29,39 @@
     --body-bg: rgb(29, 29, 29);
     --primary-bg: rgb(37, 37, 37);
     --border-color: rgb(217, 255, 0);
+    --command-color: rgb(59, 59, 59);
+
+    /* for scroll */
+    --scrollBg: rgb(197, 197, 197);
+    --scrollBgHover: rgb(211, 211, 211);
 }
+
+/* custom scroll start */
+/* width */
+::-webkit-scrollbar
+{
+    width: 9px;
+}
+
+/* Track */
+::-webkit-scrollbar-track
+{
+    background: #ffffff00;
+}
+
+/* Handle */
+::-webkit-scrollbar-thumb
+{
+    background: var(--scrollBg);
+    border-radius: 15px;
+}
+
+/* Handle on hover */
+::-webkit-scrollbar-thumb:hover
+{
+    background: var(--scrollBgHover);
+}
+/* custom scroll end */
 
 body {
     background: var(--body-bg);
@@ -53,7 +90,7 @@ body {
     content: '';
     width: 0%;
     height: 3px;
-    background: rgb(255, 0, 0);
+    background: var(--border-color);
     position: absolute;
     bottom: 0;
     left: 50%;
@@ -124,10 +161,11 @@ body {
 
 .sqlCommand span {
     font-size: 1rem;
-    color: var(--body-bg);
+    color: var(--command-color);
     user-select: none;
 }
 
 /* .sqlComment {
     margin-top: 0.5rem;
 } */
+
