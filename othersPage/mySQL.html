@@ -31,11 +31,13 @@
     <div class="primary-menu-wrapper primaryMenuWrap">
         <ul class="primary-menu">
 
-            <li class="primary-menu-items"><a href="../othersPage/gitAndGithub.html" class="primary-menu-link">git and gitHub</a></li>
+            <li class="primary-menu-items"><a href="../othersPage/gitAndGithub.html" class="primary-menu-link">git and
+                    gitHub</a></li>
 
             <li class="primary-menu-items"><a href="../othersPage/mySQL.html" class="primary-menu-link">my sql</a></li>
 
-            <li class="primary-menu-items"><a href="../othersPage/javaScript.html" class="primary-menu-link">javaScript</a></li>
+            <li class="primary-menu-items"><a href="../othersPage/javaScript.html"
+                    class="primary-menu-link">javaScript</a></li>
 
         </ul>
     </div>
@@ -254,7 +256,7 @@
 
         <br>
 
-        <div class="sqlCommand"><span>command : </span> WHERE Age<18;< /div>
+        <div class="sqlCommand"><span>command : </span> WHERE Age<18;<div>
                 <div class="sqlComment">
                     শুধু মাত্র যাদের Age ১৮ থেকে কম, তাদের উপাত্ত দেখতে।
                 </div>
@@ -276,155 +278,157 @@
                         <div class="sqlComment">
                             যার Id ১০৯ শুধু তার উপাত্ত দেখতে।
                         </div>
-
-                        <br>
-
-                        <div class="sqlCommand"><span>command : </span> WHERE Id!=109;</div>
-                        <div class="sqlComment">
-                            Id ১০৯ বাদে সকলের উপাত্ত দেখতে।
-                        </div>
-
                 </div>
+        </div>
 
-                <div class="heading-documentary">between</div>
-                <div class="documentary-area">
+        <br>
 
-                    <!-- where clause 1 -->
-                    <div class="sqlHead">between :</div>
-                    <div class="sqlCommand"><span>command : </span> SELECT *</div>
-                    <div class="sqlCommand"><span>command : </span> FROM table_name</div>
-                    <div class="sqlCommand"><span>command : </span> WHERE Id BETWEEN 102 AND 105;</div>
-                    <div class="sqlComment">
-                        যাদের Id ১০২ থেকে ১০৫, শুধু তাদের উপাত্ত দেখতে।
-                    </div>
+        <div class="sqlCommand"><span>command : </span> WHERE Id!=109;</div>
+        <div class="sqlComment">
+            Id ১০৯ বাদে সকলের উপাত্ত দেখতে।
+        </div>
 
-                </div>
+    </div>
 
-                <div class="heading-documentary">or</div>
-                <div class="documentary-area">
+    <div class="heading-documentary">between</div>
+    <div class="documentary-area">
 
-                    <!-- where clause 1 -->
-                    <div class="sqlHead">or :</div>
-                    <div class="sqlCommand"><span>command : </span> SELECT *</div>
-                    <div class="sqlCommand"><span>command : </span> FROM table_name</div>
-                    <div class="sqlCommand"><span>command : </span> WHERE Gender='Male' OR GPA>=3.50;</div>
-                    <div class="sqlComment">
-                        যে কোন একটি শর্ত সত্য হলে OR কাজ করে।
-                        GPA মিলে গেলে Male ও আসতে পারে Female ও আসতে পারে।
-                    </div>
+        <!-- where clause 1 -->
+        <div class="sqlHead">between :</div>
+        <div class="sqlCommand"><span>command : </span> SELECT *</div>
+        <div class="sqlCommand"><span>command : </span> FROM table_name</div>
+        <div class="sqlCommand"><span>command : </span> WHERE Id BETWEEN 102 AND 105;</div>
+        <div class="sqlComment">
+            যাদের Id ১০২ থেকে ১০৫, শুধু তাদের উপাত্ত দেখতে।
+        </div>
 
-                </div>
+    </div>
 
-                <div class="heading-documentary">And</div>
-                <div class="documentary-area">
+    <div class="heading-documentary">or</div>
+    <div class="documentary-area">
 
-                    <!-- where clause 1 -->
-                    <div class="sqlHead">And :</div>
-                    <div class="sqlCommand"><span>command : </span> SELECT *</div>
-                    <div class="sqlCommand"><span>command : </span> FROM table_name</div>
-                    <div class="sqlCommand"><span>command : </span> WHERE Gender='Male' AND GPA>=3.50;</div>
-                    <div class="sqlComment">
-                        দুটি শর্তই সত্য হতে হবে। Gender Male হলে, GPA 3.50 এর সমান অথবা বড় হতে হবে, নাহলে দেখাবে না।
-                    </div>
+        <!-- where clause 1 -->
+        <div class="sqlHead">or :</div>
+        <div class="sqlCommand"><span>command : </span> SELECT *</div>
+        <div class="sqlCommand"><span>command : </span> FROM table_name</div>
+        <div class="sqlCommand"><span>command : </span> WHERE Gender='Male' OR GPA>=3.50;</div>
+        <div class="sqlComment">
+            যে কোন একটি শর্ত সত্য হলে OR কাজ করে।
+            GPA মিলে গেলে Male ও আসতে পারে Female ও আসতে পারে।
+        </div>
 
-                </div>
+    </div>
 
-                <div class="heading-documentary">And, or</div>
-                <div class="documentary-area">
+    <div class="heading-documentary">And</div>
+    <div class="documentary-area">
 
-                    <!-- where clause 1 -->
-                    <div class="sqlHead">And, or :</div>
-                    <div class="sqlCommand"><span>command : </span> SELECT *</div>
-                    <div class="sqlCommand"><span>command : </span> FROM table_name</div>
-                    <div class="sqlCommand"><span>command : </span> WHERE City='Khulna' AND (Gender='Female' OR
-                        GPA>=3.50);</div>
-                    <div class="sqlComment">
-                        City Khulna ই হতে হবে। আবার Gender Female অথবা Male হলেও, GPA 3.50 থেকে বেশি কিংবা সমান হলেও
-                        দেখাবে।
-                    </div>
+        <!-- where clause 1 -->
+        <div class="sqlHead">And :</div>
+        <div class="sqlCommand"><span>command : </span> SELECT *</div>
+        <div class="sqlCommand"><span>command : </span> FROM table_name</div>
+        <div class="sqlCommand"><span>command : </span> WHERE Gender='Male' AND GPA>=3.50;</div>
+        <div class="sqlComment">
+            দুটি শর্তই সত্য হতে হবে। Gender Male হলে, GPA 3.50 এর সমান অথবা বড় হতে হবে, নাহলে দেখাবে না।
+        </div>
 
-                </div>
+    </div>
 
-                <div class="heading-documentary">in</div>
-                <div class="documentary-area">
+    <div class="heading-documentary">And, or</div>
+    <div class="documentary-area">
 
-                    <!-- where clause 1 -->
-                    <div class="sqlHead">in :</div>
-                    <div class="sqlCommand"><span>command : </span> SELECT *</div>
-                    <div class="sqlCommand"><span>command : </span> FROM table_name</div>
-                    <div class="sqlCommand"><span>command : </span> WHERE City IN ('Sylhet', 'Khulna', 'Dhaka');</div>
-                    <div class="sqlComment">
-                        যাদের City হসেবে Sylhet, Khulna, Dhaka দেওয়া তাদের উপাত্ত গুলো দেখতে।
-                    </div>
+        <!-- where clause 1 -->
+        <div class="sqlHead">And, or :</div>
+        <div class="sqlCommand"><span>command : </span> SELECT *</div>
+        <div class="sqlCommand"><span>command : </span> FROM table_name</div>
+        <div class="sqlCommand"><span>command : </span> WHERE City='Khulna' AND (Gender='Female' OR
+            GPA>=3.50);</div>
+        <div class="sqlComment">
+            City Khulna ই হতে হবে। আবার Gender Female অথবা Male হলেও, GPA 3.50 থেকে বেশি কিংবা সমান হলেও
+            দেখাবে।
+        </div>
 
-                </div>
+    </div>
 
-                <div class="heading-documentary">not in</div>
-                <div class="documentary-area">
+    <div class="heading-documentary">in</div>
+    <div class="documentary-area">
 
-                    <!-- where clause 1 -->
-                    <div class="sqlHead">not in :</div>
-                    <div class="sqlCommand"><span>command : </span> SELECT *</div>
-                    <div class="sqlCommand"><span>command : </span> FROM table_name</div>
-                    <div class="sqlCommand"><span>command : </span> WHERE City NOT IN ('Sylhet', 'Khulna', 'Dhaka');
-                    </div>
-                    <div class="sqlComment">
-                        যাদের City হসেবে Sylhet, Khulna, Dhaka দেওয়া তাদের বাদ দিয়ে, বাকি সবার উপাত্ত গুলো দেখতে।
-                    </div>
+        <!-- where clause 1 -->
+        <div class="sqlHead">in :</div>
+        <div class="sqlCommand"><span>command : </span> SELECT *</div>
+        <div class="sqlCommand"><span>command : </span> FROM table_name</div>
+        <div class="sqlCommand"><span>command : </span> WHERE City IN ('Sylhet', 'Khulna', 'Dhaka');</div>
+        <div class="sqlComment">
+            যাদের City হসেবে Sylhet, Khulna, Dhaka দেওয়া তাদের উপাত্ত গুলো দেখতে।
+        </div>
 
-                </div>
+    </div>
 
-                <div class="heading-documentary">like</div>
-                <div class="documentary-area">
+    <div class="heading-documentary">not in</div>
+    <div class="documentary-area">
 
-                    <!-- where clause 1 -->
-                    <div class="sqlHead">like :</div>
-                    <div class="sqlCommand"><span>command : </span> SELECT *</div>
-                    <div class="sqlCommand"><span>command : </span> FROM table_name</div>
-                    <div class="sqlCommand"><span>command : </span> WHERE Name LIKE 'J%';</div>
-                    <div class="sqlComment">
-                        যাদের নামের প্রথম অক্ষর J, দিয়ে শুধু তাদের উপাত্ত গুলো দেখতে।
-                    </div>
+        <!-- where clause 1 -->
+        <div class="sqlHead">not in :</div>
+        <div class="sqlCommand"><span>command : </span> SELECT *</div>
+        <div class="sqlCommand"><span>command : </span> FROM table_name</div>
+        <div class="sqlCommand"><span>command : </span> WHERE City NOT IN ('Sylhet', 'Khulna', 'Dhaka');
+        </div>
+        <div class="sqlComment">
+            যাদের City হসেবে Sylhet, Khulna, Dhaka দেওয়া তাদের বাদ দিয়ে, বাকি সবার উপাত্ত গুলো দেখতে।
+        </div>
 
-                    <br>
+    </div>
 
-                    <div class="sqlCommand"><span>command : </span> WHERE Name LIKE '%j';</div>
-                    <div class="sqlComment">
-                        যাদের নামের শেষ অক্ষর J, শুধু তাদের উপাত্ত গুলো দেখতে।
-                    </div>
+    <div class="heading-documentary">like</div>
+    <div class="documentary-area">
 
-                    <br>
+        <!-- where clause 1 -->
+        <div class="sqlHead">like :</div>
+        <div class="sqlCommand"><span>command : </span> SELECT *</div>
+        <div class="sqlCommand"><span>command : </span> FROM table_name</div>
+        <div class="sqlCommand"><span>command : </span> WHERE Name LIKE 'J%';</div>
+        <div class="sqlComment">
+            যাদের নামের প্রথম অক্ষর J, দিয়ে শুধু তাদের উপাত্ত গুলো দেখতে।
+        </div>
 
-                    <div class="sqlCommand"><span>command : </span> WHERE Name LIKE '_j';</div>
-                    <div class="sqlCommand"><span>command : </span> WHERE Name LIKE '_j%';</div>
-                    <div class="sqlComment">
-                        যাদের নামের দ্বীতিয় অক্ষর J, শুধু তাদের উপাত্ত গুলো দেখতে।
-                    </div>
+        <br>
 
-                    <br>
+        <div class="sqlCommand"><span>command : </span> WHERE Name LIKE '%j';</div>
+        <div class="sqlComment">
+            যাদের নামের শেষ অক্ষর J, শুধু তাদের উপাত্ত গুলো দেখতে।
+        </div>
 
-                    <div class="sqlCommand"><span>command : </span> WHERE Name LIKE '%j_';</div>
-                    <div class="sqlComment">
-                        যাদের নামের শেষের আগের অক্ষর J, শুধু তাদের উপাত্ত গুলো দেখতে।
-                    </div>
+        <br>
 
-                </div>
+        <div class="sqlCommand"><span>command : </span> WHERE Name LIKE '_j';</div>
+        <div class="sqlCommand"><span>command : </span> WHERE Name LIKE '_j%';</div>
+        <div class="sqlComment">
+            যাদের নামের দ্বীতিয় অক্ষর J, শুধু তাদের উপাত্ত গুলো দেখতে।
+        </div>
 
-                <footer style="width: 100%; height: 195px; background: var(--primary-bg); margin-top: 51px;"></footer>
+        <br>
 
-                <script>
-                    const prefersDarkScheme = window.matchMedia("(prefers-color-scheme: dark)");
+        <div class="sqlCommand"><span>command : </span> WHERE Name LIKE '%j_';</div>
+        <div class="sqlComment">
+            যাদের নামের শেষের আগের অক্ষর J, শুধু তাদের উপাত্ত গুলো দেখতে।
+        </div>
 
-                    if (prefersDarkScheme.matches) {
-                        document.body.classList.add("dark");
-                        dayNightBtns.body.classList.remove("active");
-                    } else {
-                        document.body.classList.remove("dark");
-                        dayNightBtns.body.classList.add("active");
-                    }
-                </script>
+    </div>
 
-                <script src="../js/app.js"></script>
+    <footer style="width: 100%; height: 195px; background: var(--primary-bg); margin-top: 51px;"></footer>
+
+    <script>
+        const prefersDarkScheme = window.matchMedia("(prefers-color-scheme: dark)");
+
+        if (prefersDarkScheme.matches) {
+            document.body.classList.add("dark");
+            dayNightBtns.body.classList.remove("active");
+        } else {
+            document.body.classList.remove("dark");
+            dayNightBtns.body.classList.add("active");
+        }
+    </script>
+
+    <script src="../js/app.js"></script>
 </body>
 
 </html>
