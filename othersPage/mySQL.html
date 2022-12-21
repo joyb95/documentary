@@ -423,6 +423,7 @@
 
     </div>
 
+    <!-- for as -->
     <div class="heading-documentary">AS</div>
     <div class="documentary-area">
 
@@ -437,6 +438,7 @@
 
     <div class="heading-documentary">NOT NULL, AUTO INCREMENT</div>
     <div class="documentary-area">
+
         <div class="uppercase-text">create table <span>teacher</span></div>
         <div class="coading-text-area">
             (
@@ -451,22 +453,79 @@
             <br>
             );
             <br>
+
             <div class="sqlComment">
                 NOT NULL দিলে ফাকা রাখা যাবে না, আবার AUTO_INCREMENT দিলে প্রতি বারে এক এক বাড়িয়ে নিবে। যেমন
             </div>
             <br>
+
             <p>INSERT INTO teacher (ID, Name)</p>
             <p>VALUES (1000, 'Joy Biswas');</p>
             <div class="sqlComment">
                 teacher টেবিলে Salary কলাম থাকলেও NOT NULL না দেওয়ার কারনে VALUE দেওয়ার সময় ফাকা রাখা গেছে।
             </div>
             <br>
+
             <p>INSERT INTO teacher (Name)</p>
+
             <p>VALUES ('Joy Biswas');</p>
             <div class="sqlComment">
                 teacher টেবিলে ID কলামে NOT NULL দেওয়া থাকলেও AUTO_INCREMENT দেওয়ার কারনে VALUE হিসেবে 1000 নিবে। অর্থাৎ এক এক করে নিজে নিজেই বাড়িয়ে নিবে। এবং Salary কলাম থাকলেও NOT NULL না দেওয়ার কারনে VALUE দেওয়ার সময় ফাকা রাখা গেছে।
             </div>
         </div>
+
+    </div>
+
+    <!-- for update -->
+    <div class="heading-documentary">UPDATE</div>
+    <div class="documentary-area">
+
+        <div class="sqlHead">UPDATE :</div>
+        <div class="sqlCommand"><span>command : </span> UPDATE table_name</div>
+        <div class="sqlCommand"><span>command : </span> SET GPA=5.00</div>
+        <div class="sqlCommand"><span>command : </span> WHERE Roll=103;</div>
+        <div class="sqlComment">
+            যার রোল ১০৩ তার জিপিএ পরিবর্তন করতে।
+        </div>
+
+        <br>
+
+        <div class="sqlCommand"><span>command : </span> UPDATE table_name</div>
+        <div class="sqlCommand"><span>command : </span> SET Name='Shume', Age=21, City='Dhaka'</div>
+        <div class="sqlCommand"><span>command : </span> WHERE Roll=110;</div>
+        <div class="sqlComment">
+            যার রোল ১১০ তার নাম, বয়স এবং শহর পরিবর্তন করতে।
+        </div>
+
+        <br>
+
+        <div class="sqlCommand"><span>command : </span> UPDATE table_name</div>
+        <div class="sqlCommand"><span>command : </span> SET Salary = Salary+5000</div>
+        <div class="sqlCommand"><span>command : </span> WHERE Salary>10000;</div>
+        <div class="sqlComment">
+            যাদের বেতন ১০০০০ এর বেশি তাদের বেতন ৫০০০ বাড়াতে।
+        </div>
+        
+    </div>
+
+    <div class="heading-documentary">DELETE</div>
+    <div class="documentary-area">
+
+        <div class="sqlHead">DELETE :</div>
+        <div class="sqlCommand"><span>command : </span> DELETE FROM table_name</div>
+        <div class="sqlCommand"><span>command : </span> WHERE Roll=103;</div>
+        <div class="sqlComment">
+            যার রোল ১০৩ তার তার উপাত্ত ডিলিট করতে।
+        </div>
+
+        <br>
+
+        
+        <div class="sqlCommand"><span>command : </span> WHERE Roll>=103;</div>
+        <div class="sqlComment">
+            যাদের রোল ১০৩ এর সমান বা তার বেশি তাদের উপাত্ত ডিলিট করতে।
+        </div>
+
     </div>
 
     <footer style="width: 100%; height: 195px; background: var(--primary-bg); margin-top: 51px;"></footer>
