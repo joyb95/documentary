@@ -399,6 +399,52 @@
 
     </div>
 
+    <div class="heading-documentary">AS</div>
+    <div class="documentary-area">
+
+        <div class="sqlHead">AS :</div>
+        <div class="sqlCommand"><span>command : </span> SELECT Roll AS Id, Name As 'Students Name'</div>
+        <div class="sqlCommand"><span>command : </span> FROM table_name;</div>
+        <div class="sqlComment">
+            কোন কলামের কাস্টম নাম দিতে AS ব্যবহৃত হয়। আবার এক বা একাধিক শব্দের ক্ষেত্রে 'Students Name' কোটেশন ব্যবহৃত হবে।
+        </div>
+        
+    </div>
+
+    <div class="heading-documentary">NOT NULL, AUTO INCREMENT</div>
+    <div class="documentary-area">
+        <div class="uppercase-text">create table <span>teacher</span></div>
+        <div class="coading-text-area">
+            (
+            <br>
+            <div class="somePadding"></div> ID int NOT NULL AUTO_INCREMENT,
+            <br>
+            <div class="somePadding"></div> Name varChar(21) NOT NULL,
+            <br>
+            <div class="somePadding"></div> Salary double(10,2),
+            <br>
+            <div class="somePadding"></div> PRIMARY KEY(ID)
+            <br>
+            );
+            <br>
+            <div class="sqlComment">
+                NOT NULL দিলে ফাকা রাখা যাবে না, আবার AUTO_INCREMENT দিলে প্রতি বারে এক এক বাড়িয়ে নিবে। যেমন
+            </div>
+            <br>
+            <p>INSERT INTO teacher (ID, Name)</p>
+            <p>VALUES (1000, 'Joy Biswas');</p>
+            <div class="sqlComment">
+                teacher টেবিলে Salary কলাম থাকলেও NOT NULL না দেওয়ার কারনে VALUE দেওয়ার সময় ফাকা রাখা গেছে।
+            </div>
+            <br>
+            <p>INSERT INTO teacher (Name)</p>
+            <p>VALUES ('Joy Biswas');</p>
+            <div class="sqlComment">
+                teacher টেবিলে ID কলামে NOT NULL দেওয়া থাকলেও AUTO_INCREMENT দেওয়ার কারনে VALUE হিসেবে 1000 নিবে। অর্থাৎ এক এক করে নিজে নিজেই বাড়িয়ে নিবে। এবং Salary কলাম থাকলেও NOT NULL না দেওয়ার কারনে VALUE দেওয়ার সময় ফাকা রাখা গেছে।
+            </div>
+        </div>
+    </div>
+
     <footer style="width: 100%; height: 195px; background: var(--primary-bg); margin-top: 51px;"></footer>
 
     <script>
